@@ -28,6 +28,7 @@ Either as a global variable, or inside your card function, you must define the a
 
 #### 3. Include the buttons in the rich card
 The last step is to add the buttons option to the card. Each array item will correspond to seperate buttons. See my example of the hero card in the code (I include two buttons). [Read more about cards](https://docs.botframework.com/en-us/node/builder/chat/session/#cards)
+
 `.buttons(buttonList)`
 
 ### Conversation Example

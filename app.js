@@ -26,6 +26,7 @@ server.post('/api/messages', connector.listen())
 // Define the event when action 'Profile' is called via the HaroCard button
 // When action 'Profile' is called, dialog '/profile' will be added to the Dialog Stack
 bot.beginDialogAction('Profile', '/profile')
+bot.beginDialogAction('End', '/end')
 
 // Root dialog, conversation Begins Here!
 bot.dialog('/', function (session) {
@@ -45,11 +46,24 @@ bot.dialog('/profile', [
   }
 ])
 
+// Dialog we wish to trigger via the button
+bot.dialog('/end', [
+  function (session) {
+    if (session.userData.name) {
+      session.send('Goodbye! ' + session.userData.name)
+    } else {
+      session.send('Goodbye!')
+    }
+    session.endDialog()
+  }
+])
+
 // RichCard dialog with HeroCard
 bot.dialog('/cards', [
   function (session) {
     // Define the array of buttons with the corresponding actions, in this case, we wish to execute action 'Profile' with argument null
-    var buttonList = [builder.CardAction.dialogAction(session, 'Profile', null, 'Profile')]
+    var buttonList = [builder.CardAction.dialogAction(session, 'Profile', null, 'Profile'),
+      builder.CardAction.dialogAction(session, 'End', null, 'end')]
     var msg = new builder.Message(session)
         .textFormat(builder.TextFormat.xml)
         .attachments([

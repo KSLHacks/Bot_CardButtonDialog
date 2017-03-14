@@ -1,0 +1,24 @@
+{
+  "name": "Bot_CardButtonDialog",
+  "version": "1.0.0",
+  "description": "Demo code for clicking a card button and triggering a Dialog",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KSLHacks/Bot_CardButtonDialog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KSLHacks/Bot_CardButtonDialog/issues"
+  },
+  "homepage": "https://github.com/KSLHacks/Bot_CardButtonDialog#readme",
+  "dependencies": {
+    "botbuilder": "^3.7.0",
+    "restify": "^4.3.0"
+  }
+}

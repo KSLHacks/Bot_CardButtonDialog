@@ -1,4 +1,4 @@
-..# Bot_CardButtonDialog
+# Bot_CardButtonDialog
 
 #### Kevin Leung @KSLHacks - Microsoft Technical Evangelist
 

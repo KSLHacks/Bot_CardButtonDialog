@@ -23,7 +23,7 @@ server.post('/api/messages', connector.listen())
 // Bots Dialogs
 // =========================================================
 
-// Define the event when action 'Profile' is called via the HaroCard button
+// Define the event when action 'Profile' is called via the HeroCard button
 // When action 'Profile' is called, dialog '/profile' will be added to the Dialog Stack
 bot.beginDialogAction('Profile', '/profile')
 bot.beginDialogAction('End', '/end')
